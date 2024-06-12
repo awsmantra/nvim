@@ -100,6 +100,7 @@ return {
 
  {
    "folke/trouble.nvim",
+  lazy = false,
    dependencies = { "nvim-tree/nvim-web-devicons" },
    opts = {
   -- your configuration comes here
@@ -148,7 +149,21 @@ return {
       })
     end,
   },
+
+{
+  "hedyhli/outline.nvim",
+  lazy = false,
+  config = function()
+    -- Example mapping to toggle outline
+
+    require("outline").setup {
+      -- Your setup opts here (leave empty to use defaults)
+    }
+  end,
+},
+  
 -- {
+  --
 --     "ThePrimeagen/harpoon",
 --     branch = "harpoon2",
 --     config = function()
